@@ -1,2 +1,9 @@
-# ClassTeX2
-Newer, more extensible version of ClassTeX which incorporates various changes and usability enhancements.  Not backwards-compatible.
+#ClassTeX
+
+Simple LaTeX class for writing taking notes.  Features premade text box commands and a clean header.
+
+##Instructions
+See ClassTeXInstructions.pdf for the full documentation.
+
+##Demo
+See ClassTeXDemo.pdf for a Lorem Ipsum demo.

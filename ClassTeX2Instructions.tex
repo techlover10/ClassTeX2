@@ -1,0 +1,62 @@
+\documentclass{ClassTeX2}
+\notetaker{Jared Wong}
+\classnum{TeX 100B}
+\classname{Introduction to \ClassTeX}
+\semester{Spring 2016}
+\lecdate{3 February 2016}
+\lectopic{Intro to \ClassTeX}
+\univ{\TeX\ University}
+%\tradstyle
+\begin{document}
+	\maketitle
+	\section{Intro}
+	Welcome to \ClassTeX!  \ClassTeX\ is a \LaTeX\ template designed to facilitate fast, clean, and organized note-taking.  \LaTeX\ has many organizational features that allow users to quickly format text in elegant ways, but often these require verbose commands in order to achieve properly.  The \ClassTeX\ template provides a clean and organized layout for notes, as well as some predefined commands for making key points stand out easily.  \ClassTeX now includes additional commands for convenience in proof-based classes and other situations, as well as additional package dependencies to ensure that the note boxes will be more friendly with additional formatting options.
+	
+	\section{Setting up the document}
+	
+	\subsection{Required Commands}
+	The following instructions are required by the template (the document will not compile without them).
+	\begin{itemize}
+		\item \texttt{$\backslash$notetaker} -- Specifies the author of the notes.
+		\item \texttt{$\backslash$classnum} -- In college, this is intended for the course number.  The way the template is designed, it can be used for any sort of short class ID.
+		\item \texttt{$\backslash$classname} -- Full name of the course.
+		\item \texttt{$\backslash$lecdate} -- Date of the lecture.
+	\end{itemize}
+	
+	\subsection{Optional Commands}
+	\ClassTeX\ is optimized for taking notes during college courses.  The following instructions are not required for compilation, but the template is optimized for their use.
+	\begin{itemize}
+		\item \texttt{$\backslash$hwmode} -- Insert at beginning of an empty \ClassTeX\ document to remove the captions before the name and date in the title box.
+		\item \texttt{$\backslash$semester} -- Left blank if not specified.
+		\item \texttt{$\backslash$lectopic} -- Useful if a lecture has a meaningful title.  Defaults to "Lecture Notes" if left unspecified.
+		\item \texttt{$\backslash$univ} -- University or institution where the lecture took place.  Left blank if not specified.
+		\item \texttt{$\backslash$tradstyle} -- By popular request!  Inserting this command in the document switches the entire document to the traditional \TeX\ font.  Omitting it leaves the default Sans Serif font.
+	\end{itemize}
+
+	\section{Note Boxes}
+	
+	\subsection{Examples and Usage}
+	\minornoteleft{Minor Note Left}{\texttt{$\backslash$minornoteleft} is useful for important pointers.  The first argument is the title of the note, in bold, and the second argument is the note itself.} 
+		
+	Note boxes are the main feature of \ClassTeX.  During lectures, there are often remarks made in passing that a student might wish to take note of and remember -- small concepts, tips, and other things that might be helpful in the future.  \ClassTeX\ includes commands to allow for the easy addition of these blurbs into any set of notes.\\
+
+	To use the note boxes, simply use the command before the section relative to which you are aligning the note box.  Although this is a planned fix in a future update, the current template requires note boxes to be written prior to the text which is to be wrapped around them.  See the note on the next page, or check out the source for more info.\\
+	
+	\importantnote{Important Note}{\texttt{$\backslash$importantnote} Takes the same arguments as the minor notes, but these are boxes which take up the whole page -- this command is designed for more important main points that need to be remembered.}
+	
+	\subsection{Known Issues}
+	\minornoteleft{Box Placement}{Boxes are "inserted" with text wrap based on where you write the box in the source code, so you might need to add or remove line breaks to clean up the appearance.}
+	
+	Note boxes \textbf{do not} automatically avoid each other.  If you find that a note box overlaps with another, simply add line breaks until they no longer overlap.  (This might potentially be fixed in a future update).
+    
+	\minornoteright{Box Properties, \\Box Titles}{The width of the box is limited by design.  Titles can be made multiline to avoid this!}
+    
+	The \texttt{minornoteright} command does not align to the right unless there is text to the left of it.  This is a consequence of the design of the template, but may also be modified in a future update and is listed as a known issue for this reason.
+	\importantnote{Minor Note Right}{\texttt{$\backslash$minornoteright} Identical formatting but on the right side.  Use at your own risk - this command is currently awaiting bugfix.} 
+	
+	\ClassTeX\ note blocks do not interact well with environments that create huge blocks of space, such as \texttt{itemize} or \texttt{enumerate}.  If you wish to insert a note block near one of these environment, you will need to insert it before or after the environment is created.
+	\section{Additional Info}
+	\importantnote{Want to improve the template?}{The template has a lot left to play around with.  Fork it and contribute!}
+	A generic demo of \ClassTeX\ is also available on GitHub and in the source for the project. The source for this document and for the Lorem Ipsum demo might be useful if you run into trouble with the layout of note boxes.
+	
+\end{document}
